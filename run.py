@@ -1,3 +1,5 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# tic Tac Toe game
+
+player = input("Hey YOU!!! Whats your name?\n")
+
+player_answer = input(f"Hi {player}, do you want to play a game of Tic Tac Toe against me?\n")
