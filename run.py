@@ -77,6 +77,9 @@ def play_game():
         # input number equivalent to the position on the board
         show_board(board)
         user_move = int(input("Enter your move (1-9): \n"))
+        if user_move < 1 or user_move > 9:
+            print("Invalid move. Please enter a number between 1 and 9.")
+            continue
         if board[user_move] == " ":
             board[user_move] = "X"
         else:
