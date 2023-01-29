@@ -1,3 +1,13 @@
+"""
+To do list:
+- Fix bugs  if user puts numbers or letters on input
+- its_a_draw functions needs to be fix / draw is not happening
+
+"""
+
+
+
+
 # tic Tac Toe game
 
 user = input("Hey YOU!!! Whats your name?\n")
@@ -49,6 +59,13 @@ def ai_turn(board):
             break
 
 
+def its_a_draw(board):
+    if " " not in board:
+        return True
+    else:
+        return False
+
+
 def play_game():
 
     """
@@ -76,6 +93,7 @@ def play_game():
             elif play_again.lower() == 'yes':
                 print(f"One more round {user}")
                 return play_game()
+       
         ai_turn(board)
         # ai victory conditions with frases to interact with user
         if victory(board, "O"):
@@ -87,6 +105,10 @@ def play_game():
             elif play_again.lower() == 'yes':
                 print(f"One more round {user}")
                 return play_game()
+        its_a_draw(board)
+        if its_a_draw(board):
+            print("Its a draw my worthy adversary!")
+            break
 
 
 play_game()
