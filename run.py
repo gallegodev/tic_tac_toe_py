@@ -19,6 +19,10 @@ def show_board(board):
 
 
 def victory(board, player):
+
+    """
+    Gives the condition for victory of the game
+    """
     if (board[1] == player and board[2] == player and board[3] == player) or \
        (board[4] == player and board[5] == player and board[6] == player) or \
        (board[7] == player and board[8] == player and board[9] == player) or \
@@ -33,6 +37,10 @@ def victory(board, player):
 
 
 def ai_turn(board):
+
+    """
+    Gives the computer move on the board after the user move
+    """
     import random
     while True:
         move = random.randint(1, 9)
@@ -42,6 +50,11 @@ def ai_turn(board):
 
 
 def play_game():
+
+    """
+    Function to start the game
+    Posses the game loops, so the user can decide to restart the game or not
+    """
     board = [" " for x in range(10)]
     while True:
         # input number equivalent to the position on the board
@@ -50,9 +63,10 @@ def play_game():
         if board[user_move] == " ":
             board[user_move] = "X"
         else:
-            # check if input the same number
+            # check if user input the same number
             print("Invalid move. Try again.")
             continue
+        # user victory conditions with frases to interact with user
         if victory(board, "X"):
             print(f"You won {user}! Congratulations")
             play_again = input(f"{user} Do you like to play again? (yes/no)\n")
@@ -63,6 +77,16 @@ def play_game():
                 print(f"One more round {user}")
                 return play_game()
         ai_turn(board)
+        # ai victory conditions with frases to interact with user
+        if victory(board, "O"):
+            print(f"You Lost {user}! I was far superior then you. Hahahaha!\n")
+            play_again = input(f"{user} Do you like to play again? (yes/no)\n")
+            if play_again.lower() == 'no':
+                print(f"See you later {user}\n")
+                break
+            elif play_again.lower() == 'yes':
+                print(f"One more round {user}")
+                return play_game()
 
 
 play_game()
