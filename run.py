@@ -32,6 +32,15 @@ def victory(board, player):
         return False       
 
 
+def ai_turn(board):
+    import random
+    while True:
+        move = random.randint(1, 9)
+        if board[move] == " ":
+            board[move] = "O"
+            break
+
+
 def play_game():
     board = [" " for x in range(10)]
     while True:
@@ -46,13 +55,14 @@ def play_game():
             continue
         if victory(board, "X"):
             print(f"You won {user}! Congratulations")
-            play_again = input(f"{user} would you like to play again? (yes/no)\n")
+            play_again = input(f"{user} Do you like to play again? (yes/no)\n")
             if play_again.lower() == 'no':
                 print(f"See you later {user}\n")
                 break
             elif play_again.lower() == 'yes':
                 print(f"One more round {user}")
                 return play_game()
+        ai_turn(board)
 
 
 play_game()
