@@ -91,11 +91,11 @@ def play_game():
             print(f"You won {user}! Congratulations")
             play_again = input(f"{user} Do you like to play again? (yes/no)\n")
             if play_again.lower() == 'no':
-                print(f"See you later {user}\n")
+                print(f"See you later {user}")
                 print("It was nice to play against you")
                 break
             elif play_again.lower() == 'yes':
-                print(f"One more round {user}")
+                print(f"One more round {user}?")
                 return play_game()
         # draw condition
         elif its_a_draw(board):
@@ -105,7 +105,7 @@ def play_game():
                 print(f"See you later {user}\n")
                 break
             elif play_again.lower() == 'yes':
-                print(f"One more round {user}")
+                print(f"One more round {user}?")
                 return play_game()
         ai_turn(board)
         # ai victory conditions with frases to interact with user
