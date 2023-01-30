@@ -95,7 +95,7 @@ def play_game():
                 print("It was nice to play against you")
                 break
             elif play_again.lower() == 'yes':
-                print(f"One more round {user}?")
+                print(f"One more round {user}!")
                 return play_game()
         # draw condition
         elif its_a_draw(board):
@@ -103,20 +103,22 @@ def play_game():
             play_again = input(f"{user} Do you like to play again? (yes/no)\n")
             if play_again.lower() == 'no':
                 print(f"See you later {user}\n")
+                print("It was nice to play against you")
                 break
             elif play_again.lower() == 'yes':
-                print(f"One more round {user}?")
+                print(f"One more round {user}!")
                 return play_game()
         ai_turn(board)
-        # ai victory conditions with frases to interact with user
+        # AI victory conditions with frases to interact with user
         if victory(board, "O"):
             print(f"You Lost {user}! I was far superior then you. Hahahaha!\n")
             play_again = input(f"{user} Do you like to play again? (yes/no)\n")
             if play_again.lower() == 'no':
                 print(f"See you later {user}\n")
+                print("It was nice to play against you")
                 break
             elif play_again.lower() == 'yes':
-                print(f"One more round {user}")
+                print(f"One more round {user}!")
                 return play_game()
         # draw condition
         elif its_a_draw(board):
@@ -124,9 +126,10 @@ def play_game():
             play_again = input(f"{user} Do you like to play again? (yes/no)\n")
             if play_again.lower() == 'no':
                 print(f"See you later {user}\n")
+                print("It was nice to play against you")
                 break
             elif play_again.lower() == 'yes':
-                print(f"One more round {user}")
+                print(f"One more round {user}!")
                 return play_game()
         
 
