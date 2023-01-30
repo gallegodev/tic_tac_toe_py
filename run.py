@@ -1,13 +1,3 @@
-"""
-To do list:
-- Fix bugs  if user puts numbers or letters on input
-- its_a_draw functions needs to be fix / draw is not happening
-
-"""
-
-
-
-
 # tic Tac Toe game
 
 user = input("Hey YOU!!! Whats your name?\n")
@@ -60,6 +50,10 @@ def ai_turn(board):
 
 
 def its_a_draw(board):
+
+    """
+    Function of game draw condition
+    """
     for i in range(1, len(board)):
         if board[i] == " ":
             return False
@@ -80,16 +74,17 @@ def play_game():
     while True:
         # input number equivalent to the position on the board
         show_board(board)
-        user_move = int(input("Enter your move (1-9): \n"))
-        if user_move < 1 or user_move > 9:
-            print("Invalid move. Please enter a number between 1 and 9.")
-            continue
-        if board[user_move] == " ":
-            board[user_move] = "X"
-            moves += 1
+        user_m = input("Enter your move (1-9): \n")
+        if user_m.isnumeric() and int(user_m) > 0 and int(user_m) < 10:
+            user_m = int((user_m))
+            if board[user_m] == " ":
+                board[user_m] = "X"
+                moves += 1
+            else:
+                print("Invalid move. Try again.")
+                continue
         else:
-            # check if user input the same number
-            print("Invalid move. Try again.")
+            print("Invalid move. Please enter a number between 1 and 9.")
             continue
         # user victory conditions with frases to interact with user
         if victory(board, "X"):
@@ -97,6 +92,7 @@ def play_game():
             play_again = input(f"{user} Do you like to play again? (yes/no)\n")
             if play_again.lower() == 'no':
                 print(f"See you later {user}\n")
+                print("It was nice to play against you")
                 break
             elif play_again.lower() == 'yes':
                 print(f"One more round {user}")
