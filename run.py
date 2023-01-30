@@ -60,7 +60,10 @@ def ai_turn(board):
 
 
 def its_a_draw(board):
-    if " " not in board:
+    for i in range(1, len(board)):
+        if board[i] == " ":
+            return False
+    if not victory(board, "X") and not victory(board, "O"):
         return True
     else:
         return False
@@ -72,6 +75,7 @@ def play_game():
     Function to start the game
     Posses the game loops, so the user can decide to restart the game or not
     """
+    moves = 0
     board = [" " for x in range(10)]
     while True:
         # input number equivalent to the position on the board
@@ -82,6 +86,7 @@ def play_game():
             continue
         if board[user_move] == " ":
             board[user_move] = "X"
+            moves += 1
         else:
             # check if user input the same number
             print("Invalid move. Try again.")
@@ -96,7 +101,16 @@ def play_game():
             elif play_again.lower() == 'yes':
                 print(f"One more round {user}")
                 return play_game()
-       
+        # draw condition
+        elif its_a_draw(board):
+            print(f"Its a draw {user}")
+            play_again = input(f"{user} Do you like to play again? (yes/no)\n")
+            if play_again.lower() == 'no':
+                print(f"See you later {user}\n")
+                break
+            elif play_again.lower() == 'yes':
+                print(f"One more round {user}")
+                return play_game()
         ai_turn(board)
         # ai victory conditions with frases to interact with user
         if victory(board, "O"):
@@ -108,10 +122,16 @@ def play_game():
             elif play_again.lower() == 'yes':
                 print(f"One more round {user}")
                 return play_game()
-        its_a_draw(board)
-        if its_a_draw(board):
-            print("Its a draw my worthy adversary!")
-            break
-
+        # draw condition
+        elif its_a_draw(board):
+            print(f"Its a draw {user}")
+            play_again = input(f"{user} Do you like to play again? (yes/no)\n")
+            if play_again.lower() == 'no':
+                print(f"See you later {user}\n")
+                break
+            elif play_again.lower() == 'yes':
+                print(f"One more round {user}")
+                return play_game()
+        
 
 play_game()
