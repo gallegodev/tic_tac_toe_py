@@ -122,7 +122,7 @@ def play_game():
             print("------------------------------------------------------")
             print(f"Its a draw {user}")
             play_again = input(f"{user} Do you like to play again? (yes/no)\n")
-            ("------------------------------------------------------")
+            print("------------------------------------------------------")
             if play_again.lower() == 'no':
                 print("-------------------------------")
                 print(f"See you later {user}\n")
