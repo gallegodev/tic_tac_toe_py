@@ -1,9 +1,16 @@
 # tic Tac Toe game
 
 user = input("Hey YOU!!! Whats your name?\n")
-
-print(f"Hi {user}, lets play a game of Tic Tac Toe against me. \n")
-print("I bet that even brilliant the way u r I can beat you\n")
+print("-----------------------------------------")
+print(f"Hi {user}, lets play a game of Tic Tac Toe against me.\n")
+print("I bet that even if you are extremely intelligent I can beat you.\n")
+print("-----------------------------------------")
+print("Each position on the board has a number equivalent")
+print("to the position you want to place your move.\n")
+print("The board starts at position 1 in the top left corner")
+print("and ends at position 9 in the bottom right corner.\n")
+print("Now that you know how the game works, do you your best to beat me")
+print("-----------------------------------------")
 
 
 def show_board(board):
