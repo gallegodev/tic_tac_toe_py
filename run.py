@@ -109,15 +109,17 @@ def play_game():
         if victory(board, "X"):
             print("----------------------------------------------------------")
             print(f"You won {user}! Congratulations")
-            play_again = input(f"{user} Do you like to play again? (yes/no)\n")
+            play_a = input(f"{user} Do you like to play again? (yes/no)\n")
+            while play_a.lower() not in ['yes', 'no']:
+                play_a = input("Invalid input, answer with 'yes' or 'no':\n")
             print("----------------------------------------------------------")
-            if play_again.lower() == 'no':
+            if play_a.lower() == 'no':
                 print("-------------------------------")
                 print(f"See you later {user}")
                 print("It was nice to play against you")
                 print("-------------------------------")
                 break
-            elif play_again.lower() == 'yes':
+            elif play_a.lower() == 'yes':
                 print("-----------------------")
                 print(f"One more round {user}!")
                 print("-----------------------")
@@ -126,15 +128,17 @@ def play_game():
         elif its_a_draw(board):
             print("------------------------------------------------------")
             print(f"Its a draw {user}")
-            play_again = input(f"{user} Do you like to play again? (yes/no)\n")
+            play_a = input(f"{user} Do you like to play again? (yes/no)\n")
+            while play_a.lower() not in ['yes', 'no']:
+                play_a = input("Invalid input, answer with 'yes' or 'no':\n")
             print("------------------------------------------------------")
-            if play_again.lower() == 'no':
+            if play_a.lower() == 'no':
                 print("-------------------------------")
                 print(f"See you later {user}\n")
                 print("It was nice to play against you")
                 print("-------------------------------")
                 break
-            elif play_again.lower() == 'yes':
+            elif play_a.lower() == 'yes':
                 print("-----------------------")
                 print(f"One more round {user}!")
                 print("-----------------------")
@@ -144,15 +148,17 @@ def play_game():
         if victory(board, "O"):
             print("----------------------------------------------------------")
             print(f"You Lost {user}! I was far superior then you. Hahahaha!\n")
-            play_again = input(f"{user} Do you like to play again? (yes/no)\n")
+            play_a = input(f"{user} Do you like to play again? (yes/no)\n")
+            while play_a.lower() not in ['yes', 'no']:
+                play_a = input("Invalid input, answer with 'yes' or 'no':\n")
             print("----------------------------------------------------------")
-            if play_again.lower() == 'no':
+            if play_a.lower() == 'no':
                 print("-------------------------------")
                 print(f"See you later {user}\n")
                 print("It was nice to play against you")
                 print("-------------------------------")
                 break
-            elif play_again.lower() == 'yes':
+            elif play_a.lower() == 'yes':
                 print("-----------------------")
                 print(f"One more round {user}!")
                 print("-----------------------")
@@ -161,15 +167,17 @@ def play_game():
         elif its_a_draw(board):
             print("------------------------------------------------------")
             print(f"Its a draw {user}")
-            play_again = input(f"{user} Do you like to play again? (yes/no)\n")
+            play_a = input(f"{user} Do you like to play again? (yes/no)\n")
+            while play_a.lower() not in ['yes', 'no']:
+                play_a = input("Invalid input, answer with 'yes' or 'no':\n")
             print("------------------------------------------------------")
-            if play_again.lower() == 'no':
+            if play_a.lower() == 'no':
                 print("-------------------------------")
                 print(f"See you later {user}\n")
                 print("It was nice to play against you")
                 print("-------------------------------")
                 break
-            elif play_again.lower() == 'yes':
+            elif play_a.lower() == 'yes':
                 print("-----------------------")
                 print(f"One more round {user}!")
                 print("-----------------------")
