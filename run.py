@@ -4,7 +4,7 @@ print("Hello!  :)")
 user = input("Whats your name?\n").strip()
 while not user:
     print("---------------------------------")
-    print("A name must be given, otherwise your computer will explode")
+    print("A name must be given, otherwise we can't proced")
     user = input("Whats your name?\n").strip()
 
 print("-----------------------------------------")
