@@ -98,7 +98,7 @@ def play_game():
                 moves += 1
             else:
                 print("----------------------------------------------------")
-                print("Invalid move. You already use this cordinate.")
+                print("Invalid move. You cannot use the same number.")
                 print("----------------------------------------------------")
                 continue
         else:
