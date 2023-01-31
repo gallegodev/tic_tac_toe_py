@@ -1,7 +1,12 @@
 # tic Tac Toe game
 
 print("Hello!  :)")
-user = input("Whats your name?\n")
+user = input("Whats your name?\n").strip()
+while not user:
+    print("---------------------------------")
+    print("A name must be given, otherwise your computer will explode")
+    user = input("Whats your name?\n").strip()
+
 print("-----------------------------------------")
 print(f"Hi {user}, lets play a game of Tic Tac Toe against me.\n")
 print("I bet that even if you are extremely intelligent I can beat you.\n")
