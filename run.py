@@ -1,4 +1,4 @@
-# tic Tac Toe game
+# Super Tic Tac Toe game
 print("Super TIC TAC TOE!!!\n")
 
 print("Hello!  :)")
@@ -96,11 +96,13 @@ def play_game():
             if board[user_m] == " ":
                 board[user_m] = "X"
                 moves += 1
+            # error message if user uses the same number
             else:
                 print("----------------------------------------------------")
                 print("Invalid move. You cannot use the same number.")
                 print("----------------------------------------------------")
                 continue
+        # error message if the user uses letters instead of numbers
         else:
             print("----------------------------------------------------")
             print("Invalid move. Please enter a number between 1 and 9.")
@@ -111,6 +113,7 @@ def play_game():
             print("----------------------------------------------------------")
             print(f"You won {user}! Congratulations")
             play_a = input(f"{user} Do you like to play again? (yes/no)\n")
+            # condition to the user only use yes or no, if asked to play again
             while play_a.lower() not in ['yes', 'no']:
                 play_a = input("Invalid input, answer with 'yes' or 'no':\n")
             print("----------------------------------------------------------")
