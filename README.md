@@ -19,7 +19,7 @@ Super Tic Tac Toe is based on the classic tic tac toe paper game. You can read m
 
 # Features
 <h2>Board generation</h2>
-<img src="assets/images/pic1.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku">
+<img src="assets/images/pic_1.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku">
 
 <ul>
     <li>
@@ -36,14 +36,16 @@ Super Tic Tac Toe is based on the classic tic tac toe paper game. You can read m
     </li>
 </ul>
 <h2>Input Validation and error-checking</h2>
-<img src="assets/images/pic2.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku">
+<img src="assets/images/pic_2.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku showing a input error if user input a number smaller then 0, bigger then 9 and  letter instead of number on the board">
 
 <ul>
     <li>
         <p>User can't enter coordinates outside the size od the board</p>
     </li>
     <li>
-        <p>User can't input letters or empty spaces instead numbers on the board</p>
+        <p>User can't input letters or empty spaces instead of numbers on the board</p>
     </li>
+    <li>
+        <p>User can't input the same guess twice</p>
 </ul>
-    
+<img src="assets/images/pic_3.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku showing a input error if user input the same number on the board">
