@@ -1,4 +1,5 @@
 # tic Tac Toe game
+print("Super TIC TAC TOE!!!\n")
 
 print("Hello!  :)")
 user = input("Whats your name?\n").strip()
