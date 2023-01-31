@@ -18,22 +18,32 @@ Super Tic Tac Toe is based on the classic tic tac toe paper game. You can read m
 <p>The user will be represented by X and the computer by O.</p>
 
 # Features
-<h2>Existing Features</h2>
-<ul>Board Generation
-    <li>
-        <p>Computer randomly place his position on the board to try to win from the user.<p>
-    </li>
+<h2>Board generation</h2>
+<img src="assets/images/pic1.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku">
+
+<ul>
     <li>
         <p>Rules are shown to the user when game start for better guidance</p>
+    </li>
     <li>
-</ul>
-
-
+        <p>Board is generated for user first movement</p>
+    <li>
+    <li>
         <p>Play against the computer</p>
     </li>
-
-
     <li>
         <p>Accepts user input
     </li>
+</ul>
+<h2>Input Validation and error-checking</h2>
+<img src="assets/images/pic2.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku">
 
+<ul>
+    <li>
+        <p>User can't enter coordinates outside the size od the board</p>
+    </li>
+    <li>
+        <p>User can't input letters or empty spaces instead numbers on the board</p>
+    </li>
+</ul>
+    
