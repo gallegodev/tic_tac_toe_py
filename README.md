@@ -17,3 +17,23 @@ Super Tic Tac Toe is based on the classic tic tac toe paper game. You can read m
  <p>The players and the computer take turns marking the spaces in a three-by-three grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.</p> 
 <p>The user will be represented by X and the computer by O.</p>
 
+# Features
+<h2>Existing Features</h2>
+<ul>Board Generation
+    <li>
+        <p>Computer randomly place his position on the board to try to win from the user.<p>
+    </li>
+    <li>
+        <p>Rules are shown to the user when game start for better guidance</p>
+    <li>
+</ul>
+
+
+        <p>Play against the computer</p>
+    </li>
+
+
+    <li>
+        <p>Accepts user input
+    </li>
+
