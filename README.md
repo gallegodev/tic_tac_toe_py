@@ -82,3 +82,52 @@ Super Tic Tac Toe is based on the classic tic tac toe paper game. You can read m
     </li>
 </ul>
 <img src="assets/images/pic_5.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku showing a input error if user input different answer from yes or no if wishes to play the game again">
+<br>
+<h2>Remaining Bugs</h2>
+<ul>
+    <li>
+       <p>No bugs remaining.</p>
+    </li>
+</ul>
+<br>
+<h2>Validator Testing</h2>
+<h3>PEP8</h3>
+<ul>
+    <li>
+        <p>No errors were returned from pep8ci.herokuapp.com
+    </li>
+</ul>
+<img src="assets/images/pic_4.jpg" alt="Presentation of PEP8 website showing that there is no error on the python code inputed">
+
+# Deployment
+<p>This project was deployed using Code Institute's mock terminal for Heroku.</p>
+<br>
+<p>Steps for deployment:</p>
+<ul>
+    <li>
+       <p>Fork or clone this repository</p>
+    </li>
+    <li>
+       <p>Create a new Heroku app</p>
+    </li>
+    <li>
+       <p>Set the buildbacks to Python and NodeJS in that order</p>
+    </li>
+    <li>
+       <p>Link the Heroku app to the repository</p>
+    </li>
+    <li>
+       <p>Click on Deploy</p>
+    </li>
+</ul>
+<br>
+
+# Credits
+<ul>
+    <li>
+        <p>Code Institute for the deplyment terminal
+    </li>
+    <li>
+        <p>Wikipedia for the details on the Batleship game
+    </li>
+</ul>
