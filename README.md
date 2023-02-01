@@ -49,3 +49,36 @@ Super Tic Tac Toe is based on the classic tic tac toe paper game. You can read m
         <p>User can't input the same guess twice</p>
 </ul>
 <img src="assets/images/pic_3.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku showing a input error if user input the same number on the board">
+
+<h2>Future Features</h2>
+<ul>
+    <li>
+        <p>Add score to the game</p>
+    </li>
+</ul>
+
+# Testing
+<p>I have manually tested this project by doing the following:
+<ul>
+    <li>
+        <p>Passed the code through a PEP8 linter and confirmed there are no problems</p>
+    </li>
+    <li>
+        <p>Given invalid inputs: strings when numbers are expected, out of bounds inputs, same input twice</p>
+    </li>
+    <li>
+        <p>Tested in my local terminal and the Code Institute Heroku terminal</p>
+    </li>
+</ul>
+<br>
+<h2>Bugs</h2>
+<h3>Solved Bugs<h3>
+<ul>
+    <li>
+        <p>I couldnt invalidate users input if the user input empty spaces on the user name variable. I fixed by using the strip method.</p>
+    </li>
+    <li>
+        <p>When asked to play again the user was faced with the answer yes or no. If the user puts anything besides yes or no the code would collapse and give error messages. I find by adding a while statement with a lower method and a list containing "yes" and "no", if the user gives any different message from yes or no a message error is shown asking the user to use yes or no for answer.</p>
+    </li>
+</ul>
+<img src="assets/images/pic_5.jpg" alt="Presentation of Super Tic Tac Toe game in the Code Institute mock terminal on Heroku showing a input error if user input different answer from yes or no if wishes to play the game again">
